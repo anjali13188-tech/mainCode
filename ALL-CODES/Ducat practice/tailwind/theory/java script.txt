@@ -1,0 +1,1432 @@
+javascript:- light weight programming language.
+=> it is a scripting language.           
+=> it is used both client side and server side[nodejs].
+=> developed by brenden eich in 1995.
+=> ecmaScript2009 ES5
+=> ecmaScript2015 ES6
+        
+====================================================================
+Why we use it?
+=> for creating dynamic webpages. 
+=> pop menus
+=> event handling
+=> validation
+=> creating framework and library
+=> web appliactions as well as mobile applications
+
+syntax:-
+
+  <script>
+    .. code...
+  </script>
+
+There are two ways of writing javascript codes.
+1. internal js  
+ a)  <head>
+        <script>
+            ..code..
+        </script>
+    </head>
+
+b)  <body>
+        <script>
+          ...code..    
+
+        </script>
+    </body>
+
+
+2. external js => filename.js
+
+
+============================================
+predefined functions
+
+      
+          object.fun()
+        
+	document.write() 
+	console.log()
+        console.warn()
+	alert()
+        confirm()
+        prompt()
+
+-------------------------------------------------------------
+variable => A name given to the location where data is kept.
+  
+  rules of declaring a variable
+   1. any variable name begin with $,_,any alphabet
+   2. space is not allowed
+   3. symbols are not allowed except $ and _ (underscore)
+   
+     a= 90 (valid)		1a=90 (invalid)
+     $= 10 (valid)		simple interest = 20 (invalid)// space is not allowed
+     simple_interest =20(valid)
+    si=20
+    SI=20
+    Si=20
+    a@1=10 (inavlid) // symbols not allowed
+    _1= 8 (valid)
+=====================================================
+data types
+  primitive
+    1. number => integer, decimal
+    2. string => a sequence of characters. it can be either in single quote of double quotes.
+    3. undefined
+    4. BigInt => to store big no .
+    5. Boolean => true/false
+    6. null => invalid value
+    7. Symbol
+to check datatype we use =>[ typeof ]
+ non-primitive
+   to store multiple values.
+   a) array
+   b) object
+    
+------------------------------------
+// data type
+       let a=-10
+       let b=3.45
+       console.log(typeof b)
+       let name='ravi';
+       let name2="ravi";
+       console.log(typeof name)
+
+       let logIn = "true";
+       console.log(typeof logIn)
+       console.log(a);
+       console.log(b);
+       console.log(name);
+       console.log(name2)
+===============================================
+
+=======================================================
+	<!--  -->  html comments
+	/*  */  css comments
+
+	//  single line comments (js comments)
+	/* ....
+	....
+	...*/  multi line comments (js comments)
+=====================================================
+name 
+hindi
+eng
+maths
+total =
+avg =total/3
+
+======================================================
+ename = 
+post =
+bp =
+hra 10% of bp
+pf  8% of bp
+esi 1% of bp
+ns = bp+hra-pf-esi
+===========================================================================
+operator=> it is a symbol that performs a specific task on operands
+    experssion=>  a , 2 ,a+b-c  etc. 
+
+   c=a+b*5/c-2  [here c,b,5,2 ==> operands]
+                [=,+,*,/- ==> operators]
+
+types [three types]
+-----------
+=> unary operator  ++  --
+=> binary operator
+=> ternary operator
+
+
+1. unary operator ++[increment operator],--[decrement operator]
+   ==> both operators canbe either prefix or postfix
+       ++a/--a [prefix]  ===> add one/subtract one
+       a++/a-- [postfix] ===> add one/subtract one
+rule one:
+ if prefix both operator wil perform same task whether prefix or postfix when used isolated.
+
+rule two
+2. when used with other varaiable will perform different task
+              a) if prefix
+                  i) first solve self
+                  ii) then assign the value to another variable
+              b) if postfix
+                  i) first assign the value to another variable
+                  ii) then solve self
+  
+
+2. binary operator
+   1. arithmetic [+,-,*,/,%[mod]] ,**(power]
+    bodmas
+   a) bracket
+   b) % / *
+   c) +-
+
+
+    example 
+       <script>
+            a=10
+            b=3
+            // c=a/b;
+            c=a%b;
+            document.write(c);
+        </script>
+   2. relational oeprators
+   == , !=
+   === ,!==
+=  ==
+      <,>,<=,>=,!=[not equal to],==[equal to],===[identical],!==[not identical]
+      ==> all generates boolean values [true,false]
+
+      ==> to compare two values.
+           0==> false
+           non-zero => true
+        <script>
+            a="10"
+            b=10
+            console.log(a===b)
+        </script>
+    3. logical operator
+        and && , or  || ,not !
+
+
+ 	==> all generates boolean values [true,false]
+        ==> to compare more than two values.
+       <script>
+            a=20
+            b=10
+           d = !(a<b) && !(b==a);
+           
+            console.log(d); 
+        </script>
+
+    4. bitwise => ~ one's complement
+                  & bitwise and
+                  | bitwise or
+                  ^ exclusive or
+                  << left shift 
+                  >> right shift
+             
+            smallest measuring unit =      bit
+
+            4bits => 1 nibble
+            8bits/2nibble =  1byte
+            1024bytes => 1kb
+            1024kb => 1mb
+            1024mb => 1gb
+            1024gb => 1tb
+
+
+          
+3. ternary/conditional operator
+           ? :
+           ?[true] :[false]
+   	 <script>
+          a=10,b=20
+          a>b ? alert("hello") : alert("welcome")
+        </script>
+
+  assignent operator    
+    a+=1 ===> a=a+1
+    a/=b ===> a=a/b
+
+==========================
+Precedence of operators :- 
+===========================
+
+Parentheses: () - Highest precedence, expressions within parentheses are evaluated first.
+Member Access: . - Accessing properties of an object.
+Function Calls: () - Calling a function.
+Unary Operators: ++, --, !, typeof, etc. - Operators that operate on a single operand.
+Multiplication, Division, Modulus: *, /, %
+Addition, Subtraction: +, -
+Comparison Operators: <, >, <=, >=, ==, !=, ===, !==
+Logical AND: &&
+Logical OR: ||
+Assignment Operators: =, +=, -=, etc. - Lowest precedence, assigns a value to a variable.
+=========================
+hoisting  
+     <script>
+            "use strict" //=> [must define variable] before using it
+        let a
+        a =10
+        console.log(a)
+
+   
+    
+        </script>
+==========================================
+conditional statements==> 
+1. if else => two conditions
+      if(condition)
+        {
+           ..code..  
+        }
+        else
+        {
+            ..code
+        }
+
+-----------------
+ 
+        <script>
+        
+        x=2
+        y=1
+        if(x>y)
+        {
+            console.log("good morining")
+            console.log("aptron")
+        }
+        else
+            console.log("good night")  
+    
+        </script>
+---------------------
+2. if else if else => multiple conditions
+-------------------
+   if()
+        {..code}
+
+        else if()
+        { ...code..}
+
+        else if ()
+        {...}
+        
+        else{
+
+        }
+--------------------------------
+    <script>
+    a=10,b=120,c=30
+    if(a>b && a>c)
+    {
+        console.log("a is greater")
+    }
+
+    else if(b>a && b>c)
+    {
+        console.log(`${b} is greater than ${a} and ${c}`)
+    }
+    else{
+        console.log("c is greater")
+    }
+
+    </script>
+-----------------------------------------
+
+3. switch case => multiple conditions
+-------------
+<script>
+      switch(condition)
+      {
+        case value:
+            code 
+        break;
+
+        case value:
+            code 
+        break;
+
+        case value:
+            code 
+        break;
+
+        default:
+          code 
+        break;
+        
+
+      }
+------------------------------------
+  user = eval(prompt("Enter your choice (1-3) :"))
+      switch(user)
+      {
+        case 1:
+            console.log("sunday")
+        break;
+
+        case 2:
+            console.log("monday")
+        break;
+
+        case 3:
+            console.log("tuesday")
+        break;
+
+        default:
+            console.log("Wrong choice.. Try Again!!!")
+        break;
+        
+
+      }
+    </script>
+====================================================
+
+
+
+4. Looping => it repeats a statement upto given no of times until condition is true.
+   types
+  1. while
+  2. for 
+  3. do while
+  4. for of => array
+
+  a) starting point a=1
+  b) end point a=10
+  c) updation
+  d) block of loop  { }
+
+
+
+    Key Differences from for...in:
+     - for...of iterates over values (elements of an array, characters in a string,        etc.).
+     - for...in iterates over property names (keys in an object).
+       Works with:
+       - Arrays
+       - Strings
+       - Maps
+       - Sets
+       - NodeLists (DOM collections)
+
+  5. for in loop => object
+ ==> The for...in loop in JavaScript is used to iterate over the properties of an        object. 
+ ==> It allows you to access each key or property name dynamically.
+     syntax:->
+	for (let key in object) 
+        {
+  	    console.log(key + ": " + object[key]);
+	}
+example:-->
+
+const car = {
+  make: "Toyota",
+  model: "Corolla",
+  year: 2020
+};
+
+for (let key in car) {
+  console.log(`${key}: ${car[key]}`);
+}
+
+Important Points:
+- The for...in loop is best suited for objects, not arrays.
+- If used on an array, the order of iteration is not guaranteed.
+- For arrays, prefer for...of, forEach(), or a traditional for loop.
+
+
+  6. forEach()
+----------------------------------
+while loop ==> 
+syntax:-
+   <starting point/initialization>
+         while(condition-endpoint)
+      {
+         <statements>
+         <updation>
+      }
+----------------------------------------------
+        <script>
+            let a = 1 // initialisation
+            while(a<=10)
+            {
+                document.write("hello js <br>")
+                a++;
+            }
+        </script>
+==================================================================
+ <script>
+            let a = 1 // initialisation
+            while(a<=10)
+            {
+                document.write(a,"<br>")
+                a++;
+            }
+        </script>
+===================================================================
+
+<!-- Revese loop -->
+        <script>
+            let a = 10 // initialisation
+            while(a>=1)
+            {
+                document.write(a,"<br>")
+                a--;
+            }
+        </script>
+================================================================
+     let a=1
+            while(a<=5)
+            {
+                let p = prompt("Enter principal : ")
+                let r = prompt("Enter rate of interest : ")
+                let t = prompt("Enter time (years) : ")
+                let si = (p*r*t)/100
+                document.write(`principal : ${p} rate ${r}  Year ${t} si : ${si}`)
+              
+
+                a++
+
+            }
+=============================================================
+for loop
+   syntax:
+         for(starting point; condition ;updation)
+         {
+             ...code...
+         }
+
+ for(;;) // infinite loop
+==============================
+ for(a=1 ,b=10; a<=10; ++a)
+         {
+            document.write(` ${a}  ${b} <br/>`)
+         }     
+           
+===================================================
+do while loop:-  it will execute atleast one time whether condition is false.
+  syntax:- 
+     starting point
+       do
+	{ 
+          ...code... 
+       }while(condition)
+=======================================
+    <script>
+            
+          a=1;
+           do{
+            document.write(`aptron <br>`)
+            a++
+           }while(a<=10)
+           
+           
+        </script>
+=============================================
+jump statements
+    break : to stop execution of loop/ to come out of loop
+for(a=1; a<=10; ++a)
+        {
+             if(a==6)
+             {
+                break;
+             }
+            document.write(`${a} <br>`)
+        }
+
+        document.write(`out of loop`)
+===================================================
+exit : to come out of program
+   <script>
+            
+        for(a=1; a<=10; ++a)
+        {
+             if(a==6)
+             {
+              exit;
+             }
+            document.write(`${a} <br>`)
+        }
+
+        document.write(`out of loop`)
+
+        for(b=1;b<=5;b++)
+        {
+            document.write("<br> loop2")
+        }
+           
+        </script>
+=============================================================
+continue=> to skip any section of a loop.
+for(a=1; a<=10; ++a)
+        {
+             if(a==6)
+             {
+              continue;
+             }
+            document.write(`${a} <br>`)
+        }
+====================================================================
+nested loop :-- loop inside a loop
+            outer loop =>  row
+            inner loop => column
+*
+**
+***
+****
+*****
+
+*****
+****
+***
+**
+*
+
+1
+23
+456
+789
+1112131415
+====================================
+    for(r=5; r>=1; r--)
+    {
+        for(c=1;c<=r;c++)
+        {
+            document.write('*')
+        }
+        document.write("<br>")
+    } 
+====================================
+       
+      for(a=1; a<=5; ++a) // outer loop => row
+      {
+        for(b=1; b<=5; ++b)// inner loop => column
+        {
+            document.write(`${b}`)
+        }
+        document.write(`<br>`)
+      }
+=========================================
+array
+------
+    let r = ["aptron",56,78,90]
+
+    // console.log(r[1]);
+    for(let i=0; i<4; ++i)
+    {
+        document.write(`${r[i]} `)
+    }
+  
+=============================================================
+function:- a block of statements that performs a specific task is called function,
+types
+    1. built-in/library function/predefined function ex:- console.log(),alert()
+    2. user defined function => 
+             a) function having no arguments and no return value
+              
+ -----------------------------------------------------------
+
+    <script>
+        function show()
+        {
+            document.write("i am show function")
+        }
+
+        show(); // calling
+      
+
+    </script>
+--------------------------------
+             b) function having  arguments and but no return value
+-------------------------
+<script>
+      function sum(a,b,r)
+      {
+        let s= a*b*r
+        console.log(s)
+        //   console.log(a+b)
+      }
+
+      sum(2,3,5)
+    //   sum(5,8)
+      
+
+    </script>
+----------------------------------
+             c) function having  arguments as well as return value
+-----------------------------------
+     function sum(a,b)
+      {
+          return a+b;
+      }
+
+
+
+    // let result  = sum(2,3)
+    // console.log(result);
+
+    console.log(sum(2,3));
+    console.log(count())
+    
+    function count()
+      {
+        return "hello count function"
+      }
+ 
+-----------------------------------------
+             d) function having  no arguments and but return value
+----------------
+   function count()
+      {
+        return 4*6
+      }
+      
+    console.log(count()) 
+      
+-----------------------------
+
+    points to be kept in mind while creaing a function
+    1) definition of a function
+          keyword => function
+           syntax:-
+              function functionname(args)
+              {
+                 ...code...
+               }
+    2) calling/invoking of a function
+          syntax:-
+           functionname(args)
+============================================
+simple function
+    function show()
+        {
+            document.write("i am show function")
+        }
+
+        show(); // calling
+      
+        for(let i=1; i<=10; i++)
+        {
+            show();
+        }
+==============================================
+default arguments:-
+--------------------
+==>NaN 
+//default arguments
+  function sum(a,b,num=1){
+  
+        return a+b+num
+  
+  }
+  console.log(sum(3,4))
+=========================================
+ function show(a,b,disp)
+  {
+    disp();// calling
+        console.log(a+b)
+        
+  }
+   
+  show(20,30,function(){console.log("hello")});
+=============================================== 
+question
+
+mtrno
+nr
+or
+unit function will calculate unit and pass to bill function
+
+bill function will finally calculate bill
+==================================================
+
+anonymous function
+======================================
+   <h1>Nested function</h1>
+
+   <script>
+     function salman()
+   {
+     vedparkash()
+     console.log("You are in salman function")
+   }
+
+   function vedparkash()
+   {
+     console.log("Your are in vedparaksh function")
+   }
+
+   salman();
+   </script>
+==================================================================
+   <script>
+   
+     mtrno = "m234"
+     nr = 1000
+     or = 400
+     console.log(`mtrno : ${mtrno}`)
+     console.log(`nr : ${nr}`)
+     console.log(`or : ${or}`)
+     unitt(nr,or) // unit function call
+     function unitt(nr,or) // defintion of unit function
+     {
+         unit = nr-or
+         console.log(`unit : ${unit}`)
+         bill(unit) // bill function call
+     }
+
+     function bill(unit) // defintion of bill function
+     {
+        b = unit * 3
+        console.log(`bill : ${b}`)
+     } 
+   
+   </script>
+   ==============================================================
+  
+
+  function show(a,b)
+  {
+    return a+b
+   
+  }
+
+  console.log(show(10))
+
+-----------------
+result = > NaN
+----------------
+  // syncronous/asynchrousnous
+
+   console.log("hello")
+  
+ 
+  console.log("welcome")
+   setTimeout(()=>{
+    console.log("welcome")
+   },2000)
+
+   console.log(a)
+========================================================================
+date : 11/10/2022
+----------------------
+asyncronous programing(timer)
+<script>
+          console.log("header");
+
+        setTimeout(()=>{
+             console.log ("slider")
+          },3000)
+        
+          console.log("footer")
+       
+        </script>
+
+-----------------------------------------
+ let a=undefined;
+
+        a=300;
+       
+        console.log(a);
+        console.log(a);
+-------------------------------------------------
+      let a=undefined;
+
+        a=300;
+           
+       setTimeout(()=>{
+          a="hello";
+          console.log(a);
+       },2000);
+
+       console.log(a);
+=============================================================
+
+Promise is a javascript object that return a value which hope to receive in the future.
+        why need ? => javascript never wait for code/function result when they take some time.
+        
+        syntax
+             let promisee = new Promise(function(resolve,reject){
+                ..code...
+             })
+----- object---
+  let obj = {
+        id:101,
+        name:"ravi",
+        email:"ravi@test.com"
+    }
+    // keys => id,name,email 
+    // values => 101,ravi,ravi@test.com
+
+    console.log(obj.name)
+    console.log(obj.id)
+    console.log(obj.email)
+=====================================
+high oredered function
+====== example  1 ======
+    show(10,function (){console.log("hello x")});
+
+      function show(a,x)
+      {
+        x();
+        console.log("hello function :",a)
+      }
+========== example 2 ============================
+  function x()
+     {
+        console.log("hello x")
+     }
+
+      show(x);
+
+      function show()
+      {
+        x();
+        console.log("hello function")
+      }
+====================== arrow function ===============================
+ 
+      show(10,()=> console.log("hello x"));
+
+      function show(a,x)
+      {
+        x();
+        console.log("hello function :",a)
+      }
+====================== exapmle 3===================
+     function show()
+     {
+        return function(){
+            return "hello"
+        }
+     }
+    let a = show()
+    console.log(a());
+===================  IIEF ===================================
+
+ (()=>console.log("hello function")) 
+  ()// calling
+===========================================================
+async function getdata()
+{
+    let data = await fetch("https://632d3aa80d7928c7d246f3b8.mockapi.io/crud-app/");
+    data = await data.json();
+    console.log(data);
+
+}
+getdata();
+========================================
+for(let x=1;x<=5;x++)
+{
+    setTimeout(()=>{
+        console.log(x);
+    },x*1000)
+}
+=============================================
+
+// closure
+// without closure
+let count=0
+function updatecount()
+{
+    count++;
+    console.log(count)
+}
+count = 10
+
+updatecount()
+updatecount()
+updatecount()
+updatecount()
+=========================
+        function wrapper() 
+        {
+            let _count = 0;
+          
+            return function () 
+            {
+                _count++
+                console.log(_count)
+                
+            }
+        }
+        const update =  wrapper()
+        
+        update() 
+        update()
+        update()
+        
+ result 1 2 3
+===========================================
+        function wrapper() 
+        {
+            let _count = 0;
+          
+            return function () 
+            {
+                _count++
+                return _count;
+            }
+        }
+        const update =  wrapper()
+        
+        update() 
+        update()
+        update()
+        const total =  update() 
+==============================================
+
+<html>
+    <body>
+        <script>
+             let n = ["Mango","java","orange","kapil",45,788]
+             let size = n.length
+            //  console.log(`Array length : ${size}`)
+             for(x=0; x<size; ++x)
+             {
+                console.log(n[x])
+             }
+
+             let n2 = [10,23,485,67]
+             large=n2[0];
+             for(x=0; x<n2.length; x++)
+             {
+                if(n2[x]>large)
+                {
+                    large=n2[x];
+                }
+             }
+
+             console.log("large no is : ",large);
+
+
+
+
+            //  let n3 = parseInt(n2.length)
+            //  console.log(Math.large(n3))
+
+              
+                // console.log(n[2])
+        </script>
+    </body>
+</html>
+
+======================================
+
+  
+       
+        
+        console.log(`total count : ${total}`)
+====> result : total count: 4
+====================================================
+array using Array() method
+=======
+let name = new Array("apple","mango","cherry","guavava");
+            // console.log(name)
+            // console.log(name[0]);
+            for(c=0; c<name.length; c++)
+            {
+                console.log(name[c]);
+            }
+// array methods//
+            1. pop() => delete an element from a given array (end)
+            2. push() => to add an element in a given array (end)
+
+            // dom = > document object model;
+            // document.getElementById()
+
+            //   document.getElementById('root').innerHTML="welcome"
+================================================================
+===== pop method ====
+              let name = new Array("ram","shyam","kapil","mohit");
+              document.getElementById('root').innerHTML=name;
+
+              function remove()
+              {
+                 name.pop();
+                 document.getElementById('data').innerHTML=name;
+
+              }
+//=============== push method ===========================
+            // let languages = new Array("java","php","python","javascript");
+            // document.getElementById('root').innerHTML=languages;
+            // function add(){
+            //     languages.push("reactjs","angular");
+            //     document.getElementById('data').innerHTML=languages;
+            // }
+
+=================================================================
+     //=============== unshift method ===========================
+            // adds element from beginning
+            let user = new Array("mohan","manish","jatin");
+            document.getElementById('root').innerHTML= user;
+            function add()
+            {
+                user.unshift("akshay");
+                document.getElementById('data').innerHTML=user
+
+            }
+
+      //=============== shift method ===========================
+            // removes element from beginning
+            let user = new Array("mohan","manish","jatin");
+            document.getElementById('root').innerHTML= user;
+            function del()
+            {
+                user.shift();
+                document.getElementById('data').innerHTML=user
+
+            }
+
+
+             //=============== slice method ===========================
+            // The slice() method returns selected elements in an array, as a new array.
+            let user = new Array("arun","amit","mohan","manish","jatin","aarav","somnath");
+            document.getElementById('root').innerHTML= user;
+            function get()
+            {
+                 let a = user.slice(3,4);
+                document.getElementById('data').innerHTML=a
+
+            }
+
+
+ //=============== slice method negative ===========================
+             
+            // The slice() method returns selected elements in an array, as a new array.
+
+    slice(end,start)
+=====================================
+            let user = new Array("arun","amit","mohan","manish","jatin","aarav","somnath");
+            document.getElementById('root').innerHTML= user;
+            function get()
+            {
+                 let a = user.slice(-2);
+                document.getElementById('data').innerHTML=a
+
+            }
+==================================
+   The splice() method adds and/or removes array elements.
+
+   //=============== splice method ===========================
+            //  The splice() method adds and/or removes array elements. 
+            let user = new Array("arun","amit","mohan","manish","jatin","aarav","somnath");
+            document.getElementById('root').innerHTML= user;
+            function get()
+            {
+                user.splice(2,2,"dorimon","pogo");
+                document.getElementById('data').innerHTML=user
+
+            }
+=============================================
+  //=============== sort method ===========================
+            // put in ascending order 
+            let user = new Array("mohan","arun","amit","manish","jatin","aarav","somnath");
+            document.getElementById('root').innerHTML= user;
+            function get()
+            {
+                user.sort()
+                document.getElementById('data').innerHTML=user
+
+            }
+========             //=============== reverse method ===========================
+            
+            let user = new Array("mohan","arun","amit","manish","jatin","aarav","somnath");
+            document.getElementById('root').innerHTML= user;
+            function get()
+            {
+                user.reverse()
+                document.getElementById('data').innerHTML=user
+
+            }
+====================================================================
+object
+rest
+destructuring
+-----------
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <script>
+        // unpacking the array inside variable [it happens according to indexes]
+        // let items =['mobile','charger','laptop',"earphone"];
+        //   let [item1] =items
+        //   let [item1,item2,item3] =items
+        //   console.log(item1,item2,item3);
+        //   rest operator (...)
+        // let [item1,...itemx] =items
+        // console.log(itemx)
+
+        // let [itme1,...itemx] = items;
+        // console.log(itemx);
+
+        // let item1=items[0];// traditional method of destructing
+        // let [item1] = items; // modern method by default return first value
+        // let [item1,item2,item3] = items
+        // let [item1,,item3,item4="unknown item"] = items
+        // console.log(item1,item3,item4);
+        // using with rest operator
+        // let [item1,item2,...itemx]=items;
+        // console.warn(itemx)
+
+        //======================== object ===================
+        // unpacking the object  values in different variables [based on keys]
+        // let obj = {name:"ravi",email:"ravi@yahoo.com",mobile:"09877",city:"delhi"};
+        // //  let {email,name}=obj;
+
+        // // console.log(email,name);
+        // // console.log(mob);
+        // // ===== rest operator===
+        // // let {...email}=obj
+        // let {mobile,...email}=obj
+        // console.log(email);
+        // console.log(mobile)
+
+
+        function sum(a,b,...agrs)
+        {
+            let sum=0
+            for(let s of agrs)
+            {
+                sum = sum + s 
+            }
+            console.log(`sum is : ${sum+a+b} `)
+        }
+
+        sum(10,20,7,8,6,7,79,90)
+        // console.log(d)
+
+
+    </script>
+    
+</body>
+</html>
+===========================================================
+10/19/2022
+--------------
+  // for in loop
+    // for of 
+    // foreach
+
+    // for in loop is used in objects
+    //    syntax :- 
+    // for(loopvariable in objectname )
+    // {
+    //     ...............
+    // }
+    // let obj = {id : 101, name :"ravi",course : "js"}
+    // for(key in obj)
+    // {
+    //     console.log(`${key}  is ${obj[key]}` )
+    // }
+
+    // for of 
+    //  syntax
+    // for(loopvariable of arrayname)
+    // {
+    //     ... code...
+    // }
+
+    // const name = Array("java","php","python","swift")
+
+    // for(data of name)
+    // {
+    //     console.log(data)
+    // }
+
+    // const name = new Array("java","php","python","swift")
+    //  name.forEach(function(a){
+    //         console.log(a)
+    //     }
+    //  )
+
+    // const name = new Array("java","php","python","swift")
+    // name.map((item,index)=>{
+    //       console.log(item,index)
+    // })
+
+
+    // const name1 = new Array(10,20,30,40)
+    // name1.map((item,index,Array)=>{
+    //       console.log(item+index,Array)
+    // })
+
+    // const age = new Array(18,20,6,4,56)
+    // const new_data =age.map(age=> age*2)
+    // console.log(new_data)
+
+    // =====filter function=====
+    // const age = new Array(18,20,6,4,56)
+    // const new_data =age.filter(age=> age>18)
+
+    // console.log(new_data)
+
+//  ==== reduce =====
+//    const age = new Array(1,2,3,4,5)
+//    const data= age.reduce((a1,a2)=>{
+//         return a1+a2
+//     })
+    
+// console.log(data)
+
+// const file = "one.jpg";
+// console.log(split('.',file))
+
+// math object
+// 1. max()
+// 2. min()
+// 3. floor()
+// 4. ceil()
+// 5. round()
+// 6. PI
+// 7. sqrt()
+ 
+// console.log(Math.max(10,20,40,560,67,89))
+
+// console.log(Math.min(10,20,40,560,67,89))
+
+// console.log(Math.floor(34.56))
+// console.log(Math.ceil(34.36))
+// console.log(Math.round(34.56))
+// console.log(Math.PI)
+// console.log(Math.random())
+
+//============================================
+// oops => object oriented programming
+// class classname
+// {
+    // properties
+    // methods
+// }
+
+// objectname = new classname()
+
+// class Mobile
+// {
+//    model_no="m13"
+//    color="gold"
+//     show()
+//    {
+//      console.log(`model no : ${this.model_no} color : ${this.color}`)
+//    }
+// }
+// samsung = new Mobile()
+// // console.log(model_no.model_no)
+// obj.show();
+
+
+// constructor()
+//  1. it is like a normal function
+//  2. we can also pass parameters inside a constructor
+//  3. it's name will be constructor only.
+//  4. it calls automatically as an object is created.
+//  5. it is used to initialize the object
+
+// class Mobile{
+//     constructor(model,color)
+//     {
+        
+//         console.log(`${model} ${color}`)
+//     }
+
+// }
+
+// samsung = new Mobile("M13","gold")
+// oppo= new Mobile("Z-13","white")
+// mi= new Mobile("kuchbhi","black")
+
+
+//inheritance = > to access properties and methods of one class by another class.
+          //  2. extends keyword
+class Parent
+{
+  constructor()
+  {
+    console.log("Parent class constructor")
+  }
+   show()
+  {
+    console.log("show function")
+  }
+}
+
+class Child extends Parent
+{
+    constructor()
+  {
+    super()
+    console.log("child class constructor")
+  }
+}
+
+c1 = new Child()
+c1.show();
+================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+
+
+
+
+
+
+
+
+	
+   
+
+
+    
+
+
+1
+121
+12321
+1234321
+123454321
+
+
+1****
+12***
+123**
+1234*
+12345
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+         

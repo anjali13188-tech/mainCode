@@ -1,0 +1,45 @@
+{
+  "users": [
+    {
+      "id": "390c",
+      "name": "ANJALI SRIVATAVA",
+      "email": "anjali13188@gmail.com",
+      "password": "13188"
+    },
+    {
+      "id": "824b",
+      "name": "ANJALI SRIVATAVA",
+      "email": "anjali13188@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "4a1f",
+      "name": "sanjana srivastava",
+      "email": "sanjana@gmail.com",
+      "password": "12345"
+    }
+  ],
+  "employees": [
+    {
+      "name": "Amit Srivastava2",
+      "email": "anjali13188@gmail.com",
+      "city": "bihar",
+      "designation": "web developr",
+      "id": "97ab"
+    },
+    {
+      "name": "sanjana srivastava123",
+      "email": "sanjana@gmail.com",
+      "city": "delhi",
+      "designation": "accountant",
+      "id": "e7ba"
+    },
+    {
+      "name": "ANJALI SRIVATAVA",
+      "email": "anjali13188@gmail.com",
+      "city": "manali",
+      "designation": "learner",
+      "id": "12d0"
+    }
+  ]
+}

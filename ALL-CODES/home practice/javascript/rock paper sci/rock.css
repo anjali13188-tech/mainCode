@@ -1,0 +1,63 @@
+/* GOOGLE FONT VARELA ROUND */
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Varela Round", sans-serif;
+    background-color: #5F9EA0;
+}
+
+.container {
+    height: 380px;
+    width: 350px;
+    background: #4682b4;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 7px;
+    padding: 25px;
+    transition: all 0.2s;
+}
+
+.container .app-title {
+    text-align: center;
+    font-size: 40px;
+    color: bisque;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.container .wepons-box {
+    height: 110px;
+    width: 110;
+    border: 1px solid red;
+    margin-top: 70px;
+}
+
+.container .wepons-box .wepons div {
+     height: 75px;
+    width: 75px;
+    background: #00CED1;
+    border: 5px  solid #00BFFF;
+    border-radius:100%;
+    float:left;
+    margin-left: 20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position: relative;
+    left:-5px;
+    cursor: pointer;
+
+}
+
+.container .wepons-box .wepons div img {
+    height: 60px;
+    width: 60px;
+}
