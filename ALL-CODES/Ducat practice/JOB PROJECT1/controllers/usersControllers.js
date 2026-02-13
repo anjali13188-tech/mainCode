@@ -57,9 +57,9 @@ export const login = async (req, res) => {
         message: "something is missing"
       })
     }
-  
+
     const user = await userModel.findOne({ email })
-            // console.log(user)
+    // console.log(user)
 
     if (!user) {
       return res.status(401).json({
@@ -80,13 +80,13 @@ export const login = async (req, res) => {
 
     else {
       const token = jwt.sign({ _id: user._id }, process.env.JWT_TOKEN,
-       { expiresIn: "2h" })
-       
+        { expiresIn: "2h" })
+
       res.status(201).cookie("token", token,
-        { maxAge: 1 * 24 * 60 * 60 * 1000, httpOnly: true, sameSite: "strict" })
+        { maxAge: 1 * 24 * 60 * 60 * 1000, httpsOnly: true, sameSite: "strict" })
         .json({
           success: true,
-          message: "LOGIN SUCCESS...",
+          message: `Welcome  back ${user.name}`,
           token,
           user: {
             _id: user._id,
@@ -110,4 +110,38 @@ export const login = async (req, res) => {
 
   }
 
+}
+
+//LOGOUT//
+export const logout = async (req, res) => {
+  try {
+    return res.status(200).cookie("token", "", { maxAge: 0 }).json({
+      message: "LOGOUT SUCCESSFULLY",
+      succes: true
+    })
+
+  } catch (error) {
+    res.status(500).json({
+      message: "ERROR WHILE LOGOUT!!!!!",
+      success: false,
+      error
+
+    })
+
+  }
+
+}
+
+//UPDATE PROFILE//
+export const updateProfile= async (req,res) => {
+  try {
+    res.send("ok profile Updated")
+  } catch (error) {
+    res.status(500).json({
+      message:"ERROR WHILE UPDATEDPROFILE.....!!!",
+      sucess:false
+    })
+    
+  }
+  
 }
