@@ -133,15 +133,57 @@ export const logout = async (req, res) => {
 }
 
 //UPDATE PROFILE//
-export const updateProfile= async (req,res) => {
+export const updateProfile = async (req, res) => {
   try {
-    res.send("ok profile Updated")
+    // res.send("ok profile Updated")
+
+    const { name, email, phone, bio, skills } = req.body
+    const file = req.file
+
+    //cloudinary
+    let skillsArray;
+    if (skills) {
+      skillsArray = skills.split(",")
+    }
+    // console.log(req.user)
+
+    const user = await userModel.findById(req.user)
+
+    if (!user) {
+      return res.status(400).json({
+        message: "USER NOT FOUND",
+        success: false
+      })
+    }
+
+    // updating user details
+    if (name) { user.name = name }
+    if (email) { user.email = email }
+    if (phone) { user.phone = phone }
+    if (bio) { user.bio = bio }
+    if (skills) { user.skills = skills }
+
+    await user.save()
+
+    return res.status(201).json({
+      success: true,
+      message: "USER UPDATED SUCCESSFULLY ",
+      user: {
+        _id: user?._id,
+        name: user?.name,
+        email: user?.email,
+        phone: user?.phone,
+        role: user?.role,
+        profile: user?.profile
+      }
+    })
+
   } catch (error) {
     res.status(500).json({
-      message:"ERROR WHILE UPDATEDPROFILE.....!!!",
-      sucess:false
+      message: "ERROR WHILE UPDATEDPROFILE.....!!!",
+      sucess: false
     })
-    
+
   }
-  
+
 }

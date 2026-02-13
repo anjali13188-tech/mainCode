@@ -4,10 +4,11 @@ const companySchema =new mongoose.Schema({
     description:{type:String,required:true},
     website:{type:String},
     location:{type:String},
-    logo:{type:String,
+    logo:{type:String},//url of company logo
     userId:{type:mongoose.Schema.Types.ObjectId,ref:"User",
-        require:true}
+        require:true
     }
+    
 
 },{timestamps:true})
 
